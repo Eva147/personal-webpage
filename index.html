@@ -1,134 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Fonts -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    <!-- CSS stylesheet -->
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <!-- CSS stylesheet -->
         <link rel="stylesheet" href="style.css">
 
-    <title>Eugenie</title>
+        <title>Eugenie</title>
 
-</head>
+    </head>
     <body>
         <div class="wrapper">
-            <!--  HEADER-->
-            <header>
-                <div class="header_container container">
-                    <!-- logo -->
-                    <div class="logo">
-                        <a href="#" class="header_logo"><img class="logo-image" src="images/images.png" alt="my-logo" width="100" height="100"></a>
-                    </div>
-                    <!-- Navigation bar -->
-                    <nav class="header_nav">
-                        <ul class="nav_list">
-                            <li class="nav_item">
-                                <a class="nav_link" href="#projects">Projects</a>
-                            </li>
-                            <li class="nav_item">
-                                <a class="nav_link" href="#about">About</a>
-                            </li>
-                            <li class="nav_item">
-                                <a class="nav_link" href="#skills">Skills</a>
-                            </li>
-                            <li class="nav_item">
-                                <a class="nav_link contact_link" href="#contact">Contact</a>
-                            </li>
-                        </ul>
-                        <div class="burger">
-                            <div class="line1"></div>
-                            <div class="line2"></div>
-                            <div class="line3"></div>
+
+            <!-- TOP-CONTAINER -->
+            <div class="top-container">
+                <!-- Header -->
+                <header>
+                    <div class="header_container container">
+                        <!-- logo -->
+                        <div class="logo">
+                            <a href="#" class="header_logo"><img class="logo-image" src="images/images.png" alt="my-logo" width="100" height="100"></a>
                         </div>
-                    </nav>
-                </div>
-            </header>
-            <section class="banner">
-                <!-- Title -->
-                <div>
-                    <div id="title">
-                        <h1>I'm Eugenie</h1>
-                        <p>Web Developer in HTML, CSS and JavaScript</p>
+                        <!-- Navigation bar -->
+                        <nav class="header_nav">
+                            <ul class="nav_list">
+                                <li class="nav_item">
+                                    <a class="nav_link" href="#projects">Projects</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a class="nav_link" href="#skills">Skills</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a class="nav_link contact_link" href="#contact">Contact me</a>
+                                </li>
+                            </ul>
+                            <div class="burger">
+                                <div class="line1"></div>
+                                <div class="line2"></div>
+                                <div class="line3"></div>
+                            </div>
+                        </nav>
                     </div>
-                </div>
-            </section>
-
-            
-    <!-- My projects -->
-
-    <section class="" id="projects">
-
-        <div class="">
-    
-            <div>
-            <h2>My projects</h2>
-
-            <div class="projects-list" id="projects">
-                <img src="" alt="Image of Book Diary project">
-                <p>link to my project_1</p>
-                <p>link to Github of my project_1</p>
+                </header>
+                <section class="banner">
+                    <!-- Title -->
+                    <div>
+                        <div id="title">
+                            <h1>I'm Eugenie</h1>
+                            <p>Web Developer in HTML, CSS and JavaScript</p>
+                        </div>
+                    </div>
+                </section>
             </div>
 
-            <div class="projects-list" id="projects">
-                <img src="" alt="Image of Choco project">
-                <p>link to my project_2</p>
-                <p>link to Github of my project_2</p>
-                </div>            
+            <!-- MIDDLE-CONTAINER -->
+            <div class="middle-container">
+                <!-- My projects -->
+                <!-- <section class="container" id="projects">
+                    <h2>My projects</h2>
+                    <div class="projects-list">
+                        <div class="projects-item" id="projects">
+                            <img src="" alt="Image of Book Diary project">
+                            <p>link to my project_1</p>
+                            <p>link to Github of my project_1</p>
+                        </div>
+
+                        <div class="projects-item" id="projects">
+                            <img src="" alt="Image of Choco project">
+                            <p>link to my project_2</p>
+                            <p>link to Github of my project_2</p>
+                            </div>            
+                        </div>
+                    </div>
+                    <hr>
+                </section> -->
+                
+                <!-- Skills -->
+                <section class="container" id="skills">
+                    <div class="my-skills">
+                        <img class="logo-skills" src="images/images.png" alt="my-logo">
+                        <h2 class="skills-title">My skills</h2>
+                        <div class="skills-content">
+                            <lu class="skills-items">
+                                <li><b>HTML5, CSS3/SCSS, JQuery, DOM</b></li>
+                                <li>Responsive layouts/Grid, JS/CSS animations</li>
+                                <li><b>JavaScript ES6</b> and the supporting framework <b>React JS</b></li>
+                                <li>Familiar with version control systems <b>Git, GitHub</b></li>
+                                <li>Basic knowledge of <b>Node.js, Express, npm, EJS</b></li>
+                                <li><b>Third-party APIs</b> and <b>RESTful APIs</b></li>
+                                <li>Basic knowledge of NoSQL database <b>MongoDB</b> (Mongoose)</li>
+                                <li>A keen eye for design and a working knowledge of industry-standard design tools <br> (i.e. Figma, Canva)</li>
+                                <br>
+                                <li>Great attitude and hunger for learning</li>
+                                <li>A thirst to adopt and master new technologies</li>
+                                <li>A desire to overcome and solve problems </li>
+                                <li>Good communication skills</li>
+                                <li>A skilled team-player</li>
+                                <li>Self-motivated with the ability to work autonomously</li>
+                            </lu>
+                        </div>
+                    </div>
+                    <a class="about-link" href="about.html">Read more about me</a>
+                    <hr>
+                </section>
+
+                <!-- Contacts -->
+                <section class="container contact-container" id="contact">
+                    <!-- <h2 class="contact-title">Contact me</h2> -->
+                    <h3 class="contact-message">I’m currently available for a Juninor Front-End Web Developer position.</h3>
+                    <button class="contact-btn" href="">CONTACT ME</button>
+                </section>
             </div>
-            
-        </div>
-    </section>
 
-    <!-- 
-    About me
-    <section class="" id="about">
-        <img class="logo-image" src="images/images.png" alt="my-logo">
-        <h2>About me</h2>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has It is a long established fact that a reader will.</p>
-        <br>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has It is a long established fact that a reader will.</p>
-        <br>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has It is a long established fact that a reader will.</p>
-
-    </section>
-    
-     Skills
-    <section class="" id="skills">
-        <img class="logo-image" src="images/images.png" alt="my-logo">
-        <h2>About me</h2>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has It is a long established fact that a reader will.</p>
-        <br>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has It is a long established fact that a reader will.</p>
-        <br>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has It is a long established fact that a reader will.</p>
-
-    </section>
-
-    Contact
-    <section class="" id="contact">
-        <h2>Contact me</h2>
-        <h3>I’m currently available for <br> Front-End Developer position.</h3>
-        <button class="btn">Message me</button>
-
-    </section>
-
-    Footer
-    <footer class="" id="footer">
-        <div class="container">
-          <a href="">LinkdIn</a>
-          <a href="">Instagram</a>
-          <a href="">Gmail</a>
-          <p>© 2022 Eugenie S. </p>
-        </div>
-      </footer>
- -->
-
+            <!-- Footer -->
+            <div class="bottom-container">
+                <footer class="" id="footer">
+                    <div class="footer-links">
+                    <a class="footer-link" href="">LinkdIn</a>
+                    <a class="footer-link" href="">Gmail</a>
+                    <p class="copyright">© 2022 Eugenie S. </p>
+                    </div>
+                </footer>
+            </div>
            
         </div>
+        <!-- Animations gsap library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
         <script src="app.js"></script>  
     </body>
 </html>
