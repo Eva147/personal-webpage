@@ -1,4 +1,11 @@
+// Current year for Footer
+let date = new Date();
+let currentYear = date.getFullYear();
+document.getElementById("curYear").innerHTML=currentYear;
+console.log(currentYear);
+        
 
+// Burger animation
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav_list');
@@ -15,14 +22,6 @@ const navSlide = () => {
         });
         // Burger animation
         burger.classList.toggle('toggle');
-    
-    
-    
-    
-    
-    
-    
-    
     });
 }
 

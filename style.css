@@ -57,6 +57,12 @@ p {
   letter-spacing: 1px;
 }
 
+span {
+  line-height: 2;
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+}
+
 hr {
   border: dotted #F6C89F 1rem;
   border-bottom: none;
@@ -145,12 +151,12 @@ nav {
   .nav_list  {
   position: absolute;
   right: 0px;
-  height:50vh;
+  height:40vh;
   top: 7vh;
   background-color: rgba(57, 99, 98, 1);
   display:flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   align-items: center;
   transform: translateX(100%); 
   transition: transform 0.5s ease-in;
@@ -158,6 +164,7 @@ nav {
   .nav_link{
     opacity: 0;
   }
+
   .burger{
     display: block;
   }
@@ -333,14 +340,18 @@ h1 {
   }
 }
 
-
 @media screen and (max-width:1024px){
   .my-skills {
     display: block;
     width: 100%;
   }
+
   .logo-skills {
     padding: 5%;
+  }
+
+  .skills-items li{
+    letter-spacing: normal;
   }
 }
 
@@ -394,7 +405,6 @@ h1 {
   color: #4B8E8D;
   width: 50%;
   margin: 0 auto;
-  padding: 1%;
 }
 
 .about-banner {
@@ -432,3 +442,26 @@ h1 {
  .about-content p{
   text-align: left;
  }
+
+ @media (max-width: 1024px) {
+  .about-container {
+    width: 80%;
+  }
+
+  .about-title h2 {
+    font-size: 5rem;
+    margin-top: 7rem;
+  }
+
+  .about-content p{
+    text-align: justify;
+    letter-spacing: normal;
+  }
+
+  .contact-message {
+    letter-spacing: normal;
+  }
+}
+
+
+/* @media screen (max-width: 768px) { */
