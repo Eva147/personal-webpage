@@ -57,12 +57,6 @@ p {
   letter-spacing: 1px;
 }
 
-span {
-  line-height: 2;
-  letter-spacing: 1px;
-  font-size: 0.75rem;
-}
-
 hr {
   border: dotted #F6C89F 1rem;
   border-bottom: none;
@@ -218,33 +212,41 @@ nav {
   box-sizing: border-box;
 }
 
-h1 {
+/* -------------------------------- Title animation ------------------------------- */
+
+.animated_title {
   font-family: 'Great Vibes', cursive;
   font-style: normal;
   font-weight: normal;
   font-size: 7.5rem;
-  padding: 0 0 20px 0;
+  padding: 1%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-#title p {
+.animated_par {
   font-weight: 300;
-  letter-spacing: 1px;
   text-align: center;
+  padding: 1%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-/* Animation for Title and Nav Bar */
+.animated_title, .animated_par {
+  display:inline-block;
+  width: 40rem;
+  padding: 2%;
+  transform: translateY(120%);
+  opacity: 0;
+} 
 
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 768px) {
+  .animated_title {
+    font-size: 5rem;
+  }
+  .animated_par {
+    font-size: 1rem;
+    text-align: center;
+  }
+};
 
 
 /* -----------My projects--------------------------------- */
@@ -319,7 +321,7 @@ h1 {
 
 
 
-/* Skills section screen 600px */
+/* Skills section screen 600px??????????????????????? */
 @media (min-width: 1024px) {
   .my-skills {
     display: grid;
@@ -399,6 +401,12 @@ h1 {
   text-align: center;
 }
 
+.copyright span {
+  line-height: 2;
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+}
+
 /* -------------ABOUT PAGE------------------------------------------ */
 .about-container {
   background-color: #FFE7D1;
@@ -418,12 +426,10 @@ h1 {
 }
 
 .about-title {
-  box-sizing: border-box;
   position: absolute;
   top: 70%;
   left: 50%;
   transform: translate(-50%, -70%);
-
 }
 
 .about-title h2 {
@@ -446,11 +452,10 @@ h1 {
  @media (max-width: 1024px) {
   .about-container {
     width: 80%;
-  }
+  }  
 
   .about-title h2 {
-    font-size: 5rem;
-    margin-top: 7rem;
+    font-size: 6rem;
   }
 
   .about-content p{
@@ -461,7 +466,11 @@ h1 {
   .contact-message {
     letter-spacing: normal;
   }
+
+  @media (max-width: 768px) {
+    .about-title h2 {
+      font-size: 5rem;
+      width: 80vw;
+    }
+  }
 }
-
-
-/* @media screen (max-width: 768px) { */
