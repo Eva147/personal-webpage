@@ -2,7 +2,6 @@
 let date = new Date();
 let currentYear = date.getFullYear();
 document.getElementById("curYear").innerHTML=currentYear;
-console.log(currentYear);
         
 
 // Animation for Burger and nav bar in mobile version
@@ -39,7 +38,7 @@ tl_about.to(".animated_about-title", {y: "0%", duration: 2.5, stagger: .5}, "-=3
 
 // Animation for all texts
 
-function animateFromTo(elem) {
+function animateText(elem) {
 
     gsap.fromTo(elem, {y: "30px", opacity: 0, autoAlpha: 0}, {
       duration: 2, 
@@ -49,14 +48,15 @@ function animateFromTo(elem) {
       ease: "expo.out", 
       overwrite: "auto"
     });
-  }
+}
 
 document.addEventListener("DOMContentLoaded", function() {
     gsap.registerPlugin(ScrollTrigger);
+    // all text elements 
     gsap.utils.toArray("._activeText").forEach(function(elem) {
         ScrollTrigger.create({
           trigger: elem,
-          onEnter: function() { animateFromTo(elem) }
+          onEnter: function() { animateText(elem) }
         });
     });
-})
+});
