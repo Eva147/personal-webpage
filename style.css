@@ -83,22 +83,31 @@ header {
 
 nav {
   display:flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  min-height: 90px;
 }
 
-.logo {
-  position: absolute;
-  margin: 1px 0 0 5rem;
+#logo_name h3{
+  font-family: 'Great Vibes', cursive;
+  color: #FFE7D1;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3rem;
+  opacity: 80%;
+  padding: 1%;
+  transform: skewY(-3deg);
 }
 
-.nav_list {
+#nav_list ul{
   display: flex;
+  align-items: center;
   justify-content: space-around;
-  width: 40%;
-}
 
+}
+ .nav_item {
+  padding: 0 2rem;
+ }
 .nav_link {
   font-weight: 300;
   color: #FFE7D1;
@@ -117,7 +126,7 @@ nav {
 .burger div {
   width: 25px;
   height: 3px;
-  margin: 5px 50px 5px 5px;
+  margin: 5px;
   background-color: #FFE7D1;
   transition: all 0.3s ease;
 }
@@ -126,23 +135,29 @@ nav {
   .about_container {
     width: 100%;
   }
-  .nav_list {
-    width: 60%;
-  }
-  .logo {
-    margin: 0 0 0 4rem;
-  }
+
+  .nav_item {
+    padding: 0 1rem;
+   }
 }
 
 @media screen and (max-width: 768px) {
   body {
     overflow-x:hidden;
   }
-  
-  .logo {
+  header {
+    padding: 2% 0;
+  }
+    
+  #logo_name {
     display: none;
   }
-  .nav_list  {
+
+  nav {
+    justify-content: flex-end;
+  }
+
+  .nav_items  {
   position: absolute;
   right: 0px;
   height:40vh;
@@ -210,6 +225,7 @@ nav {
 /* Title */
 #title {
   box-sizing: border-box;
+  color: #FFE7D1;
 }
 
 /* -------------------------------- Title animation ------------------------------- */
@@ -436,7 +452,7 @@ path {
 }
 
 /* -------------ABOUT PAGE------------------------------------------ */
-.about-container {
+#about {
   background-color: #FFE7D1;
   color: #4B8E8D;
   width: 50%;
@@ -481,7 +497,7 @@ path {
  }
 
  @media (max-width: 1024px) {
-  .about-container {
+  #about {
     width: 80%;
   }  
 

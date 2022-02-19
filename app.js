@@ -7,7 +7,7 @@ document.getElementById("curYear").innerHTML=currentYear;
 // Animation for Burger and nav bar in mobile version
 const navSlide = () => {
     const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav_list');
+    const nav = document.querySelector('.nav_items');
     const navLinks = document.querySelectorAll('.nav_link');
 
     burger.addEventListener('click', () => {
@@ -28,8 +28,8 @@ navSlide();
 // Animation for Main title and nav bar
 const tl_main = gsap.timeline({defaults: {ease: "expo.out"}});
 tl_main.to(".animated_title, .animated_par", {opacity: 1, duration: 2.5, stagger: .5});
-tl_main.to(".animated_title, .animated_par", {y: "0%", duration: 2.5, stagger: .5}, "-=3");
-tl_main.fromTo("nav", {opacity: "0"}, {opacity:"1", duration: 1}, "-=2");
+tl_main.to(".animated_title, .animated_par", {y: "0%", duration: 3, stagger: .5}, "-=3");
+tl_main.fromTo("nav", {opacity: "0"}, {opacity:"1", duration: 2}, "-=2");
 
 // Animation for About title
 const tl_about = gsap.timeline({defaults: {ease: "expo.out"}});
