@@ -1,11 +1,33 @@
-// Current year for Footer
-let date = new Date();
-let currentYear = date.getFullYear();
-document.getElementById("curYear").innerHTML=currentYear;
-        
+       
+// Animation for Navbar change colour
+gsap.registerPlugin(ScrollTrigger);
+
+const tl_nav = gsap.timeline ({
+    scrollTrigger: {
+        trigger: '.middle-container',
+        start: "-7% top",
+        toggleActions: "restart none none reverse",
+        },
+});
+tl_nav.to('header', {backgroundColor: '#FFE7D1', duration: 1});
+tl_nav.to('#logo_name h3, .nav_link', {color: '#396362', fontWeight: 400, opacity: 1, duration: 1}, '-=1');
+
+
+// Hide Navbar on scroll
+const showAnim = gsap.from('header', {
+    yPercent: -100,
+    paused: true,
+    duration: 0.5
+  }).progress(1);
+  ScrollTrigger.create({
+    start: "top top",
+    onUpdate: (self) => {
+      self.direction === -1 ? showAnim.play() : showAnim.reverse();
+    }
+  });
 
 // Animation for Burger and nav bar in mobile version
-const navSlide = () => {
+function navSlide() {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav_items');
     const navLinks = document.querySelectorAll('.nav_link');
@@ -16,8 +38,8 @@ const navSlide = () => {
         // Animate links
         navLinks.forEach((link, index) => {
             link.style.animation
-            ? link.style.animation = ''
-            : link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                ? link.style.animation = ''
+                : link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
         });
         // Burger animation
         burger.classList.toggle('toggle');
@@ -37,7 +59,6 @@ tl_about.to(".animated_about-title", {opacity: 1, duration: 3, stagger: .5});
 tl_about.to(".animated_about-title", {y: "0%", duration: 2.5, stagger: .5}, "-=3");
 
 // Animation for all texts
-
 function animateText(elem) {
 
     gsap.fromTo(elem, {y: "30px", opacity: 0, autoAlpha: 0}, {
@@ -60,3 +81,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+// Current year for Footer
+let date = new Date();
+let currentYear = date.getFullYear();
+document.getElementById("curYear").innerHTML=currentYear;

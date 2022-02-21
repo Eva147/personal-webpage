@@ -268,15 +268,10 @@ nav {
 /* -----------My projects--------------------------------- */
 
 #projects {
-  box-sizing: border-box;
-  padding: 5% 15%;
-  min-height: 100vh;
-  
   position: relative;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
+  box-sizing: border-box;
+  padding-top: 5%;
+  }
 
 
 
@@ -285,6 +280,7 @@ nav {
 #skills {
   position: relative;
   box-sizing: border-box;
+  padding-top: 5%;
 }
 
 .skills-title {
