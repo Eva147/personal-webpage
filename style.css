@@ -318,7 +318,7 @@ nav {
 }
 
 /* Main monogram */
-#monogram{
+#monogram {
   display:flex;
   align-items: center;
   justify-content: space-around;
@@ -326,33 +326,24 @@ nav {
 }
 
 /* Monogram about */
-#monogram_about_container{
+#monogram_about {
   display:flex;
   align-items: center;
   justify-content: space-around;
   margin-top: 4rem;
 }
 
-/* Animation for monogram */
-path {
+svg {
+  opacity: 0;
+}
+
+/* Animation for Monograms */
+.monogram_active_path {
+  opacity: 1;
   stroke-dasharray: 600;
   stroke-dashoffset: 600;
-  animation: dash 6s linear forwards;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-/* Animation for monogram about */
-#monogram_about path {
-  stroke-dasharray: 300;
-  stroke-dashoffset: 300;
   animation: dash 5s linear forwards;
 }
-
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
@@ -411,15 +402,15 @@ path {
 }
 
 .contact-btn {
-  background-color: #4B8E8D ;
+  background-color:  #F6C89F;
   border-radius: 25px;
-  color: #FFE7D1;
+  color: #4B8E8D;
   padding: 1rem;
-  margin: 0 0 3rem 0;
+  margin: 2rem 0;
 }
 .contact-btn:hover{
-  background-color: #F6C89F;
-  color: #4B8E8D;
+  background-color: #4B8E8D;
+  color:  #FFE7D1;
 }
 
 /* -------------Footer--------------------------------- */

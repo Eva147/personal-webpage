@@ -9,8 +9,8 @@ const tl_nav = gsap.timeline ({
         toggleActions: "restart none none reverse",
         },
 });
-tl_nav.to('header', {backgroundColor: '#FFE7D1', duration: 1});
-tl_nav.to('#logo_name h3, .nav_link', {color: '#396362', fontWeight: 400, opacity: 1, duration: 1}, '-=1');
+tl_nav.to('header', {backgroundColor: '#FFE7D1', duration: 0.5});
+tl_nav.to('#logo_name h3, .nav_link', {color: '#396362', fontWeight: 400, opacity: 1, duration: 0.5}, '-=1');
 
 
 // Hide Navbar on scroll
@@ -62,7 +62,7 @@ tl_about.to(".animated_about-title", {y: "0%", duration: 2.5, stagger: .5}, "-=3
 function animateText(elem) {
 
     gsap.fromTo(elem, {y: "30px", opacity: 0, autoAlpha: 0}, {
-      duration: 2, 
+      duration: 3, 
       y: 0,
       opacity: 1,
       autoAlpha: 1, 
@@ -72,7 +72,7 @@ function animateText(elem) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    gsap.registerPlugin(ScrollTrigger);
+
     // all text elements 
     gsap.utils.toArray("._activeText").forEach(function(elem) {
         ScrollTrigger.create({
@@ -81,6 +81,40 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+// Animation for Monograms
+
+function offset(el) {
+    const rect = el.getBoundingClientRect(),
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return rect.top + scrollTop;
+  }
+
+const animItems = document.querySelectorAll(".monogram_svg");
+
+if (animItems.length > 0) {
+    window.addEventListener('scroll', animMonogramOnScroll);
+  
+    function animMonogramOnScroll() {
+      for (let index = 0; index < animItems.length; index++) {
+        const animItem = animItems[index];
+        const animItemHeight = animItem.getAttribute("height");
+
+        const animItemOffset = offset(animItem);
+        let animItemPoint = window.innerHeight - animItemHeight * 1.5;
+
+        if (scrollY > (animItemOffset - animItemPoint) && scrollY < (animItemOffset + animItemHeight)) {
+           animItem.classList.add('monogram_active_path'); 
+        } else {
+          if(!animItem.classList.contains('_anim_no_hide')) {
+            animItem.classList.remove('monogram_active_path'); 
+          }
+        } 
+      }
+    }
+    
+}
 
 
 // Current year for Footer
