@@ -229,7 +229,10 @@ nav {
 }
 
 /* -------------------------------- Title animation ------------------------------- */
-
+.logo-main {
+  position: absolute;
+  width: 30%;
+}
 .animated_title {
   font-family: 'Great Vibes', cursive;
   font-style: normal;
@@ -247,7 +250,8 @@ nav {
 }
 
 .animated_title, .animated_par {
-  display:inline-block;
+  display:none;
+  position: absolute;
   width: 40rem;
   padding: 2%;
   transform: translateY(120%);
@@ -290,7 +294,7 @@ nav {
 
 .logo-skills {
   margin: auto;
-  max-width: 100%;
+  width: 120%;
 }
 
 .skills-items li{
@@ -477,6 +481,7 @@ svg {
 }
  .logo-about {
    padding: 2rem;
+   width: 40%;
  }
 
  .about-content p{
