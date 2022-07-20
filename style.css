@@ -14,6 +14,8 @@ ul,li{list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size: inherit;font-family: inherit;}
 
+
+
 * {
   box-sizing: border-box;
   font-family: Lato;
@@ -31,7 +33,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-family: inherit;}
 .container {
   margin: 0 auto;
   padding: 1%;
-  width: 70%;
+  width: 80%;
 }
 
 .top-container {
@@ -160,8 +162,8 @@ nav {
   .nav_items  {
   position: absolute;
   right: 0px;
-  height:40vh;
-  top: 7vh;
+  height:30vh;
+  top: 5vh;
   background-color: rgba(57, 99, 98, 1);
   display:flex;
   flex-direction: column;
@@ -182,7 +184,10 @@ nav {
 /* Side bar shows when click */
 .nav_active {
   transform: translateX(0%);
-  
+}
+
+.nav_hide {
+  transform: translateX(100%);
 }
 
 /* Animation for navbar when click on burger */
@@ -212,59 +217,72 @@ nav {
 
 /* ---------------------------------------Banner--------------------------------- */
 
-.banner {
-  min-height: 100vh;
-  width: 100%;
+#banner {
+  height: 100vh;
+  min-width: 100vw;
   position: relative;
   background-color: #396362;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Title */
-#title {
-  box-sizing: border-box;
   color: #FFE7D1;
 }
 
-/* -------------------------------- Title animation ------------------------------- */
-.logo-main {
-  position: absolute;
-  width: 30%;
+#title {
+  height: 100vh;
+  width: 100vw;
+  padding: 10rem 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
 }
+
+/* -------------------------------- Title animation ------------------------------- */
+#logo-main {
+  position: relative;
+  border-radius: 50%;
+  width: 30%;
+  animation: logoMainAnim 1.5s ease;
+}
+@keyframes logoMainAnim {
+  0% {
+    opacity: 0;
+    transform: scale(0.5)
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .animated_title {
   font-family: 'Great Vibes', cursive;
   font-style: normal;
   font-weight: normal;
-  font-size: 7.5rem;
-  padding: 1%;
+  font-size: 7rem;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .animated_par {
   font-weight: 300;
-  text-align: center;
-  padding: 1%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .animated_title, .animated_par {
-  display:none;
-  position: absolute;
-  width: 40rem;
-  padding: 2%;
+  width: 50rem;
   transform: translateY(120%);
   opacity: 0;
 } 
 
 @media screen and (max-width: 768px) {
   .animated_title {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .animated_par {
     font-size: 1rem;
     text-align: center;
+  }
+  #logo-main {
+    width: 60%;
   }
 };
 
@@ -353,6 +371,7 @@ svg {
     stroke-dashoffset: 0;
   }
 }
+
 
 
 /* Skills section screen 600px??????????????????????? */
