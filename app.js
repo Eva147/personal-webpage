@@ -10,9 +10,12 @@ const tl_nav = gsap.timeline ({
 });
 tl_nav.to('header, .nav_items', {backgroundColor: '#FFE7D1', duration: 0.5});
 tl_nav.to('.burger div', {backgroundColor: '#396362', duration: 0.3})
-tl_nav.to('.nav_link', {color: '#396362', fontWeight: 400, opacity: 1, duration: 0.5}, '-=1');
+tl_nav.to('.nav_link, #logo_name h3, #logo_name_about h3', {color: '#396362', fontWeight: 400, opacity: 1, duration: 0.5}, '-=1');
 
 
+
+// #logo_name h3
+// #logo_name_about h3 
 
 // Hide Navbar on scroll
 const showAnim = gsap.from('header', {
