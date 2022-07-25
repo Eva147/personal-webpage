@@ -1,3 +1,8 @@
+// scroll on the top when page reloaded
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}; 
+
 // Animation for Navbar change colour
 gsap.registerPlugin(ScrollTrigger);
 // time line for crossing middle container
@@ -12,10 +17,6 @@ tl_nav.to('header, .nav_items', {backgroundColor: '#FFE7D1', duration: 0.5});
 tl_nav.to('.burger div', {backgroundColor: '#396362', duration: 0.3})
 tl_nav.to('.nav_link, #logo_name h3, #logo_name_about h3', {color: '#396362', fontWeight: 400, opacity: 1, duration: 0.5}, '-=1');
 
-
-
-// #logo_name h3
-// #logo_name_about h3 
 
 // Hide Navbar on scroll
 const showAnim = gsap.from('header', {
