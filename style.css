@@ -284,8 +284,98 @@ nav {
 #projects {
   position: relative;
   box-sizing: border-box;
-  padding-top: 5%;
+}
+.projects-title {
+  margin: 1rem;
+}
+#projects_carousel {
+  position: relative;
+  margin: auto;
+  max-width: 70vw; 
+}
+#projects_images {
+  position: relative;
+}
+.projects-image{
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.projects-image:hover{
+  opacity: .8;
+}
+
+.slides {
+  display: none;
+}
+/* buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1rem;
+  color: #F6C89F;
+  font-size: 3rem;
+  transition: 0.6s ease;
+  border-radius: 0.25rem;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  color: #F6C89F;
+  background: #4B8E8D;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 1rem;
+  width: 1rem;
+  margin: 2rem .5rem;
+  background-color: #F6C89F;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #4B8E8D;
+}
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+@media screen and (max-width:1024px){
+  #projects {
+    display: block;
+    max-width: 100%;
   }
+  .projects-title {
+    font-size: 2.5rem;
+    margin: 2% auto;
+  }
+  .projects_carousel {
+    max-width: 100%;
+  }
+  .projects-image{
+    width: 100%;
+  }
+  .prev, .next {
+    font-size: 2rem;
+  }
+}
 
 /* -------------------------------------Skills--------------------------------- */
 #skills {
@@ -404,15 +494,16 @@ svg {
 
 .bottom-container {
   background-color: #396362;
-  padding: 50px 0 20px;
+  padding: 5rem 0 2rem;
 }
 .footer-link {
   color: #FFE7D1;
-  margin: 10px 50px;
+  margin: 1rem 4rem;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
 }
 .designer_logo, .designer_logo a {
   color: #FFE7D1;
-  font-size: 0.75rem;
   letter-spacing: 1px;
   font-size: 1rem;
   padding: 3em 0 1em;
@@ -431,6 +522,23 @@ svg {
   line-height: 2;
   letter-spacing: 1px;
   font-size: 0.75rem;
+}
+
+@media screen and (max-width:1024px){
+  .footer-link {
+    margin: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-link {
+    margin: 2rem;
+  }
+  .designer_logo, .designer_logo a {
+    font-size: .8rem;
+    padding: 2rem 0;
+  } 
 }
 
 /* --------------------------------------------------------------ABOUT PAGE------------------------------------------------------------ */
