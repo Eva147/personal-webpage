@@ -172,7 +172,7 @@ nav {
   flex-direction: column;
   width: 40%;
   align-items: space-around;
-  transform: translateX(100%); 
+  transform: translateX(100%);
   transition: transform 0.5s ease-in;
   }
   .burger{
@@ -259,7 +259,7 @@ nav {
   width: 50rem;
   transform: translateY(120%);
   opacity: 0;
-} 
+}
 
 @media (max-width: 1024px) {
   #logo-main {
@@ -291,7 +291,7 @@ nav {
 #projects_carousel {
   position: relative;
   margin: auto;
-  max-width: 70vw; 
+  max-width: 70vw;
 }
 #projects_images {
   position: relative;
@@ -375,6 +375,10 @@ nav {
   .prev, .next {
     font-size: 2rem;
   }
+}
+
+.updating {
+  opacity: 50%;
 }
 
 /* -------------------------------------Skills--------------------------------- */
@@ -515,7 +519,7 @@ svg {
 .copyright {
   color: #FFE7D1;
   font-size: 0.75rem;
-  
+
   text-align: center;
 }
 .copyright span {
@@ -538,7 +542,7 @@ svg {
   .designer_logo, .designer_logo a {
     font-size: .8rem;
     padding: 2rem 0;
-  } 
+  }
 }
 
 /* --------------------------------------------------------------ABOUT PAGE------------------------------------------------------------ */
