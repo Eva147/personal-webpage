@@ -299,6 +299,7 @@ nav {
 .projects-image{
   width: 80%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
 }
 .projects-image:hover{
   opacity: .8;
@@ -309,7 +310,7 @@ nav {
 }
 /* buttons */
 .prev, .next {
-  cursor: pointer;
+
   position: absolute;
   z-index: 5;
   top: 50%;
@@ -328,8 +329,9 @@ nav {
 }
 
 .prev:hover, .next:hover {
-  color: #F6C89F;
-  background: #4B8E8D;
+  cursor: pointer;
+  color: #4B8E8D;
+  opacity: 70%;
 }
 /* The dots/bullets/indicators */
 .dot {
@@ -375,10 +377,6 @@ nav {
   .prev, .next {
     font-size: 2rem;
   }
-}
-
-.updating {
-  opacity: 50%;
 }
 
 /* -------------------------------------Skills--------------------------------- */

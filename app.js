@@ -1,7 +1,7 @@
 // scroll on the top when page reloaded
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
-}; 
+};
 
 // Animation for Navbar change colour
 gsap.registerPlugin(ScrollTrigger);
@@ -59,7 +59,7 @@ const animatedParagraph = document.querySelector(".animated_par");
 if (animatedTitle || animatedParagraph) {
   tl_main.to(".animated_title, .animated_par", {opacity: 1, duration: 2.5, stagger: .5});
   tl_main.to(".animated_title, .animated_par", {y: "0%", duration: 3, stagger: .5}, "-=3");
-  tl_main.fromTo("nav", {opacity: "0"}, {opacity:"1", duration: 2}, "-=2");  
+  tl_main.fromTo("nav", {opacity: "0"}, {opacity:"1", duration: 2}, "-=2");
 }
 
 // Animation for About title
@@ -67,29 +67,29 @@ const tl_about = gsap.timeline({defaults: {ease: "expo.out"}});
 const animatedAboutTitle = document.querySelector(".animated_about-title");
 if (animatedAboutTitle) {
   tl_about.to(".animated_about-title", {opacity: 1, duration: 3, stagger: .5});
-  tl_about.to(".animated_about-title", {y: "0%", duration: 2.5, stagger: .5}, "-=3");  
+  tl_about.to(".animated_about-title", {y: "0%", duration: 2.5, stagger: .5}, "-=3");
 }
 
 // Animation for all texts
 function animateText(elem) {
   gsap.fromTo(elem, {y: "30px", opacity: 0, autoAlpha: 0}, {
-    duration: 3, 
+    duration: 3,
     y: 0,
     opacity: 1,
-    autoAlpha: 1, 
-    ease: "expo.out", 
+    autoAlpha: 1,
+    ease: "expo.out",
     overwrite: "auto"
   });
 }
-// all text elements 
-document.addEventListener("DOMContentLoaded", function() {
-  gsap.utils.toArray("._activeText").forEach(function(elem) {
-      ScrollTrigger.create({
-        trigger: elem,
-        onEnter: function() { animateText(elem) }
-      });
-  });
-});
+// all text elements
+// document.addEventListener("DOMContentLoaded", function() {
+//   gsap.utils.toArray("._activeText").forEach(function(elem) {
+//       ScrollTrigger.create({
+//         trigger: elem,
+//         onEnter: function() { animateText(elem) }
+//       });
+//   });
+// });
 // Animation for Monograms
 function offset(el) {
     const rect = el.getBoundingClientRect(),
@@ -111,7 +111,7 @@ if (animItems.length > 0) {
       let animItemPoint = window.innerHeight - animItemHeight * 1.5;
 
       if (scrollY > (animItemOffset - animItemPoint) && scrollY < (animItemOffset + animItemHeight)) {
-          animItem.classList.add('monogram_active_path'); 
+          animItem.classList.add('monogram_active_path');
       }
     }
   }
@@ -123,7 +123,7 @@ let currentYear = date.getFullYear();
 document.getElementById("curYear").innerHTML=currentYear;
 
 
-// Animation for slideshow 
+// Animation for slideshow
 let slideIndex = 1;
 showSlides(slideIndex);
 // Next/previous controls
